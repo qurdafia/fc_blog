@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>This is the {{ title }} page</h1>
+        {% for obj in object_list %}
+        <div class="box">
+            <h4>
+                {{ obj.title }}
+            </h4>
+            <p>
+                {{ obj.content }}
+            </p>
+            <p>
+                {{ obj.timestamp }}
+            </p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
