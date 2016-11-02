@@ -7,7 +7,7 @@
         {% for obj in object_list %}
         <div class="box">
             <h4>
-                {{ obj.title }}
+                <a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a>
             </h4>
             <p>
                 {{ obj.content }}

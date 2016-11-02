@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>This is the {{ title }} page</h1>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <div class="box">
+            <h4>
+                {{ instance.title }}
+            </h4>
+            <p>
+                {{ instance.content }}
+            </p>
+            <p>
+                {{ instance.timestamp }}
+            </p>
+        </div>
+
+    </body>
+</html>
