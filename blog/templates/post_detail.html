@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>This is the {{ title }} page</h1>
-    <div class="box">
-        <h4>
+    <div class="col-sm-8 col-sm-offset-2">
+        {% if instance.image %}
+            <img src="{{ instance.image.url }}" class="img-responsive"/>
+        {% endif %}
+        <h1>
             {{ instance.title }}
-        </h4>
+        </h1>
         <p>
             {{ instance.content }}
         </p>
-        <p>
-            {{ instance.timestamp }}
-        </p>
+        <small>{{ instance.timestamp }}</small>
     </div>
 {% endblock %}
