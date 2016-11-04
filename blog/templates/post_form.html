@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="col-sm-8 col-sm-offset-2">
-    <h1>Form Page</h1>
+    <h1>{{ title }} Page</h1>
     <form method='POST' action='' enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}

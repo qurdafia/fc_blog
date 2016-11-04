@@ -21,13 +21,14 @@ def post_create(request):
 
     context = {
         'form': form,
+        'title': 'Form',
     }
     return render(request, 'post_form.html', context)
 
 def post_detail(request, slug):
     instance = get_object_or_404(Post, slug=slug)
     context = {
-        'title': 'Detail',
+        'title': 'Blog',
         'instance': instance,
     }
     return render(request, 'post_detail.html', context)
